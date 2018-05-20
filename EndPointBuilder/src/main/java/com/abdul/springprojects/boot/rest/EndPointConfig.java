@@ -4,6 +4,12 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+ * 
+ * @author abdul gafur 
+ *
+ */
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class EndPointConfig {
     public String serviceId;
@@ -36,7 +42,6 @@ public class EndPointConfig {
 
 	@Override
 	public String toString() {
-		//System.out.println(to.get(1).get("TargetDirMaxFilesPerCycle"));
 		return "EndPointConfig [from=" + from + ", to=" + to + "]";
 	}
 
