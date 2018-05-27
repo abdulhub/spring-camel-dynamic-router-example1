@@ -1,0 +1,10 @@
+from:
+- ServiceEndPoint: file://in3
+  autoCreate: true
+  
+to:
+- ServiceEndPoint: amqp:queue:fromabdul
+  
+
+  
+serviceId: myserviceid111
