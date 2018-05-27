@@ -1,5 +1,7 @@
 package com.abdul.springprojects;
 
+import org.apache.camel.component.amqp.AMQPConnectionDetails;
+//import org.apache.camel.component.amqp.AMQPConnectionDetails;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -34,5 +36,10 @@ public class EndPointBuilderServiceApplication {
 	public EndPointBuilder endPointBuilder() {
 		
 		return new EndPointBuilder();
+	}
+	
+	@Bean
+	AMQPConnectionDetails amqpConnection() {
+	  return new AMQPConnectionDetails("amqp://DESKTOP-ER5CAV6:5672"); 
 	}
 }

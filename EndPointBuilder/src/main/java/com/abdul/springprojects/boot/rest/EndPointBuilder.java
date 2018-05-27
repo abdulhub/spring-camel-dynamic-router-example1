@@ -49,9 +49,11 @@ public class EndPointBuilder {
 
 	public String CreateServiceEndPoint(LinkedHashMap<String, Object> endPointConfig) {
 
-		String endPoint = endPointConfig.get("ServiceEndPoint") + "?" + getEndPointOptions(endPointConfig);
-
-		return endPoint;
+		  
+				//String endPoint = endPointConfig.get("ServiceEndPoint") + "?" + getEndPointOptions(endPointConfig);
+				String endPointParam = (endPointConfig.size() > 1) ? "?" + getEndPointOptions(endPointConfig) : "";
+				String endPoint = endPointConfig.get("ServiceEndPoint") + endPointParam;
+				return endPoint;
 
 	}
 
